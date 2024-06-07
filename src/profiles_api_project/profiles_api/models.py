@@ -53,7 +53,7 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
 
 
 
-    opjects = UserProfileManager()
+    objects = UserProfileManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name']
 
