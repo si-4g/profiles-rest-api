@@ -1,4 +1,6 @@
 from rest_framework import permissions
+
+
 class UpdateOwnProfile(permissions.BasePermission):
     """allow users to edit their own profile """
 
@@ -12,7 +14,7 @@ class UpdateOwnProfile(permissions.BasePermission):
 class PostOwnStatus(permissions.BasePermission):
     """allow users to update their own status"""
 
-    def has_object_permission(self, request, view,obj):
+    def has_object_permission(self, request, view, obj):
         """checks the user is trying to update their own status"""
 
         if request.method in permissions.SAFE_METHODS:
